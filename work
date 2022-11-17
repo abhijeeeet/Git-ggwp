@@ -1,5 +1,5 @@
 pipeline {
-    agent "Built-In"
+    agent any
     customWorkspace '/mnt/work'
     stages {
         stage('Build') { 
