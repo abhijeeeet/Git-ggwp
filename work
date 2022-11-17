@@ -4,7 +4,7 @@ pipeline {
 			label "built-in"
 			}
 	}
-    customWorkspace '/mnt/work'
+    customWorkspace "/mnt/work"
     stages {
         stage('Build') { 
             steps {
