@@ -1,0 +1,27 @@
+pipeline
+{
+  agent
+  {
+    node
+    {
+      label 'built-in'
+      customWorkspace '/mnt'
+    }
+  }
+  
+  stages
+  {
+    stage('Docker')
+    {
+      steps
+      {
+            sh 'docker build -t tomcat .'
+            sh 'docker run -itdp 8090:8080 --name abhijeet tomcat'  		
+            
+      }
+            
+    }
+  
+  }
+
+}
